@@ -1,0 +1,105 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "LynxConfig.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/LynxConfig.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LynxConfig.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LynxConfig.Core/1.0.0": {
+      "type": "project",
+      "path": "../LynxConfig.Core/LynxConfig.Core.csproj",
+      "msbuildProject": "../LynxConfig.Core/LynxConfig.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "LynxConfig.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/laomaomag/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/LynxConfig.Localization.csproj",
+      "projectName": "LynxConfig.Localization",
+      "projectPath": "/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/LynxConfig.Localization.csproj",
+      "packagesPath": "/home/laomaomag/.nuget/packages/",
+      "outputPath": "/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/laomaomag/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/LynxConfig.Core.csproj": {
+              "projectPath": "/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/LynxConfig.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/home/laomaomag/.dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

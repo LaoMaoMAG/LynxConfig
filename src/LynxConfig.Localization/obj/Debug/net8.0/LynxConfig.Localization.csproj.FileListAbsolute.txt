@@ -1,0 +1,15 @@
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/bin/Debug/net8.0/LynxConfig.Localization.deps.json
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/bin/Debug/net8.0/LynxConfig.Localization.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/bin/Debug/net8.0/LynxConfig.Localization.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/bin/Debug/net8.0/LynxConfig.Core.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/bin/Debug/net8.0/LynxConfig.Core.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConfig.Localization.csproj.AssemblyReference.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConfig.Localization.GeneratedMSBuildEditorConfig.editorconfig
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConfig.Localization.AssemblyInfoInputs.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConfig.Localization.AssemblyInfo.cs
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConfig.Localization.csproj.CoreCompileInputs.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConf.643D48B4.Up2Date
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConfig.Localization.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/refint/LynxConfig.Localization.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/LynxConfig.Localization.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Localization/obj/Debug/net8.0/ref/LynxConfig.Localization.dll

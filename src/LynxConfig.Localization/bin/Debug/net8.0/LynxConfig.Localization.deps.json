@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LynxConfig.Localization/1.0.0": {
+        "dependencies": {
+          "LynxConfig.Core": "1.0.0"
+        },
+        "runtime": {
+          "LynxConfig.Localization.dll": {}
+        }
+      },
+      "LynxConfig.Core/1.0.0": {
+        "runtime": {
+          "LynxConfig.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LynxConfig.Localization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LynxConfig.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

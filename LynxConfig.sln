@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LynxConfig.Core", "src\LynxConfig.Core\LynxConfig.Core.csproj", "{D2F8B633-98AA-40C8-91F9-C1F5EB95EAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LynxConfig.Localization", "src\LynxConfig.Localization\LynxConfig.Localization.csproj", "{2983B5C1-D260-464A-AF93-FF67B5060732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LynxConfig.Database", "src\LynxConfig.Database\LynxConfig.Database.csproj", "{F32189DE-8B29-486E-826F-5B2421074388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LynxConfig.Config", "src\LynxConfig.Config\LynxConfig.Config.csproj", "{EBCADF02-37D2-4D78-9A93-12C2AA036C1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LynxConfig.Config.Toml", "src\LynxConfig.Config.Toml\LynxConfig.Config.Toml.csproj", "{03D42032-C99F-457C-A906-69B12838CBF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2F8B633-98AA-40C8-91F9-C1F5EB95EAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F8B633-98AA-40C8-91F9-C1F5EB95EAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F8B633-98AA-40C8-91F9-C1F5EB95EAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F8B633-98AA-40C8-91F9-C1F5EB95EAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2983B5C1-D260-464A-AF93-FF67B5060732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2983B5C1-D260-464A-AF93-FF67B5060732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2983B5C1-D260-464A-AF93-FF67B5060732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2983B5C1-D260-464A-AF93-FF67B5060732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F32189DE-8B29-486E-826F-5B2421074388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F32189DE-8B29-486E-826F-5B2421074388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F32189DE-8B29-486E-826F-5B2421074388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F32189DE-8B29-486E-826F-5B2421074388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBCADF02-37D2-4D78-9A93-12C2AA036C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCADF02-37D2-4D78-9A93-12C2AA036C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCADF02-37D2-4D78-9A93-12C2AA036C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCADF02-37D2-4D78-9A93-12C2AA036C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D42032-C99F-457C-A906-69B12838CBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D42032-C99F-457C-A906-69B12838CBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D42032-C99F-457C-A906-69B12838CBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D42032-C99F-457C-A906-69B12838CBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
