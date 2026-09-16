@@ -9,3 +9,4 @@
 /home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/obj/Debug/net8.0/refint/LynxConfig.Core.dll
 /home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/obj/Debug/net8.0/LynxConfig.Core.pdb
 /home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/obj/Debug/net8.0/ref/LynxConfig.Core.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/obj/Debug/net8.0/LynxConfig.Core.sourcelink.json

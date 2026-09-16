@@ -1,0 +1,16 @@
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/bin/Debug/net8.0/LynxConfig.Parser.Json.deps.json
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/bin/Debug/net8.0/LynxConfig.Parser.Json.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/bin/Debug/net8.0/LynxConfig.Parser.Json.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.GeneratedMSBuildEditorConfig.editorconfig
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.AssemblyInfoInputs.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.AssemblyInfo.cs
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.csproj.CoreCompileInputs.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.sourcelink.json
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/refint/LynxConfig.Parser.Json.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/ref/LynxConfig.Parser.Json.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/bin/Debug/net8.0/LynxConfig.Core.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/bin/Debug/net8.0/LynxConfig.Core.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConfig.Parser.Json.csproj.AssemblyReference.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Parser.Json/obj/Debug/net8.0/LynxConf.F86E5FF0.Up2Date

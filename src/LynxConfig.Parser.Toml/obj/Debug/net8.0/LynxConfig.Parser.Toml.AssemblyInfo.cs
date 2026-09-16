@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LynxConfig.Parser.Toml")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfa7a9094e6cb1a6a3817f35d805cff1f9b48875")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+657a819c5f454b74575884436b0f03dda783229f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LynxConfig.Parser.Toml")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LynxConfig.Parser.Toml")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

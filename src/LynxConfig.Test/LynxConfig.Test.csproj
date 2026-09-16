@@ -7,4 +7,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\LynxConfig.Config\LynxConfig.Config.csproj" />
+      <ProjectReference Include="..\LynxConfig.Parser.Toml\LynxConfig.Parser.Toml.csproj" />
+    </ItemGroup>
+
 </Project>

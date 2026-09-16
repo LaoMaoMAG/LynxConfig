@@ -18,5 +18,5 @@ public interface IConfigParser<T> where T : class, new()
     /// </summary>
     /// <param name="str">配置字符串</param>
     /// <param name="obj">配置对象</param>
-    void Deserialization(string str, out T obj);
+    T Deserialization(string str);
 }

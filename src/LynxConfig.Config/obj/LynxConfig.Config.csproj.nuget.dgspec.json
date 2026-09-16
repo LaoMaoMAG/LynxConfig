@@ -184,7 +184,11 @@
           "net8.0": {
             "framework": "net8.0",
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/LynxConfig.Core.csproj": {
+                "projectPath": "/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Core/LynxConfig.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

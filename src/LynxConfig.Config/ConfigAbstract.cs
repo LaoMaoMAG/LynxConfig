@@ -1,6 +1,9 @@
 using LynxConfig.Config.Enums;
 using LynxConfig.Core.Interfaces;
+using LynxConfig.Parser.Json;
 using LynxConfig.Parser.Toml;
+using LynxConfig.Core;
+
 
 
 namespace LynxConfig.Config;
@@ -10,55 +13,72 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// <summary>
     /// 配置文件路径
     /// </summary>
-    public abstract string FilePath { get; set; }
+    public abstract string FilePath { get; init; }
 
     /// <summary>
     /// 配置文件类型
     /// </summary>
-    public EnumConfigFileType ConfigFileType
+    protected EnumConfigFileType ConfigFileType
     {
         get => _configFileType == EnumConfigFileType.Default
             ? GlobalConfigSettings.DefaultConfigFileType
             : _configFileType;
-        set => _configFileType = value;
+        init => _configFileType = value;
     }
-    private EnumConfigFileType _configFileType = EnumConfigFileType.Default;
+    private readonly EnumConfigFileType _configFileType = EnumConfigFileType.Default;
 
     /// <summary>
     /// 配置数据
     /// </summary>
-    protected abstract T ConfigData { get; set; }
-    
-    protected IConfigParser<T> Parser;
+    protected abstract T ConfigData { get; }
+
+    private IConfigParser<T>? _parser;
 
     /// <summary>
     /// 初始化
     /// </summary>
     public void Init()
     {
-        Parser = ConfigFileType switch
+        IntiParser();
+        InitFile(FilePath);
+    }
+    
+    /// <summary>
+    /// 初始化解析器
+    /// </summary>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
+    private void IntiParser()
+    {
+        if (_parser != null) return;
+        _parser = ConfigFileType switch
         {
-            EnumConfigFileType.Json => throw new ArgumentOutOfRangeException(),
+            EnumConfigFileType.Json => new JsonParser<T>(),
             EnumConfigFileType.Toml => new TomlParser<T>(),
             EnumConfigFileType.Yaml => throw new ArgumentOutOfRangeException(),
             EnumConfigFileType.Xml => throw new ArgumentOutOfRangeException(),
             EnumConfigFileType.Default => throw new ArgumentOutOfRangeException(),
             _ => throw new ArgumentOutOfRangeException()
         };
-        
+    }
+    
+    /// <summary>
+    /// 初始化文件
+    /// </summary>
+    private void InitFile(string file)
+    {
         if (File.Exists(FilePath)) return;
         File.Create(FilePath).Dispose();
         Save();
     }
-
+    
     /// <summary>
     /// 加载配置
     /// </summary>
     public void Load()
     {
         var str = File.ReadAllText(FilePath);
-        Deserialization(str, out var tempData);
-        ConfigData = tempData;
+        var loadedData = _parser!.Deserialization(str);
+        Utilities.CopyProperties(loadedData, ConfigData);
     }
 
     /// <summary>
@@ -66,7 +86,8 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// </summary>
     public void Save()
     {
-        File.WriteAllText(FilePath, Serialization(ConfigData));
+        var str = _parser!.Serialization(ConfigData);
+        File.WriteAllText(FilePath, str);
     }
 
     public bool TryLoad() => TryLoad(out _);
@@ -101,21 +122,5 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
             error = ex;
             return false;
         }
-    }
-
-    /// <summary>
-    /// 序列化
-    /// </summary>
-    protected string Serialization(T obj)
-    {
-        return Parser.Serialization(obj);
-    }
-
-    /// <summary>
-    /// 反序列化
-    /// </summary>
-    protected void Deserialization(string str, out T obj)
-    {
-        Parser.Deserialization(str, out obj);
     }
 }

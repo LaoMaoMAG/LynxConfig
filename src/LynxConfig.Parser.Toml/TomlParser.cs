@@ -13,8 +13,8 @@ public class TomlParser<T> : IConfigParser<T> where T : class, new()
         return TomlSerializer.Serialize(obj);
     }
     
-    public void Deserialization(string str, out T obj)
+    public T Deserialization(string str)
     {
-        obj = TomlSerializer.Deserialize<T>(str) ?? throw new TomlException("TOML 反序列化结果为空！");
+        return TomlSerializer.Deserialize<T>(str) ?? throw new TomlException("TOML 反序列化结果为空！");
     }
 }

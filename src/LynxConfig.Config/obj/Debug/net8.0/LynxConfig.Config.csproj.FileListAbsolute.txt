@@ -13,3 +13,12 @@
 /home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/obj/Debug/net8.0/refint/LynxConfig.Config.dll
 /home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/obj/Debug/net8.0/LynxConfig.Config.pdb
 /home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/obj/Debug/net8.0/ref/LynxConfig.Config.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Json.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Toml.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Xml.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Yaml.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Json.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Toml.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Xml.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/bin/Debug/net8.0/LynxConfig.Parser.Yaml.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config/obj/Debug/net8.0/LynxConfig.Config.sourcelink.json
