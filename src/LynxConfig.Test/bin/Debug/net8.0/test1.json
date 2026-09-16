@@ -1,1 +1,12 @@
-{"Test":"bbbb","Test2":114514,"Test3":true,"Test4":1.23,"Test5":{"Test":"test","Test2":123,"Test3":true,"Test4":1.23},"FilePath":"./test1.json"}
+{
+  "Test": "bbbb",
+  "Test2": 114514,
+  "Test3": true,
+  "Test4": 1.23,
+  "Test5": {
+    "Test": "test",
+    "Test2": 123,
+    "Test3": true,
+    "Test4": 1.23
+  }
+}

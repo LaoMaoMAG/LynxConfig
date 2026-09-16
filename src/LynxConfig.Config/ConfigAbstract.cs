@@ -40,7 +40,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     public void Init()
     {
         IntiParser();
-        InitFile(FilePath);
+        InitFile();
     }
     
     /// <summary>
@@ -64,7 +64,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// <summary>
     /// 初始化文件
     /// </summary>
-    private void InitFile(string file)
+    private void InitFile()
     {
         if (File.Exists(FilePath)) return;
         File.Create(FilePath).Dispose();
@@ -86,7 +86,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// </summary>
     public void Save()
     {
-        var str = _parser!.Serialization(ConfigData);
+        var str = _parser!.Serialization(ConfigData, GlobalConfigSettings.HiddenMemberList);
         File.WriteAllText(FilePath, str);
     }
 

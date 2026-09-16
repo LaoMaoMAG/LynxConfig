@@ -10,8 +10,9 @@ public interface IConfigParser<T> where T : class, new()
     /// 序列化
     /// </summary>
     /// <param name="obj">配置对象</param>
+    /// <param name="hiddenMemberList">隐藏成员列表</param>
     /// <returns>配置字符串</returns>
-    string Serialization(T obj);
+    string Serialization(T obj, HashSet<string> hiddenMemberList);
 
     /// <summary>
     /// 反序列化

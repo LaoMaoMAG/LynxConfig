@@ -8,7 +8,7 @@ namespace LynxConfig.Parser.Toml;
 /// </summary>
 public class TomlParser<T> : IConfigParser<T> where T : class, new()
 {
-    public string Serialization(T obj)
+    public string Serialization(T obj, HashSet<string> hiddenMemberList)
     {
         return TomlSerializer.Serialize(obj);
     }

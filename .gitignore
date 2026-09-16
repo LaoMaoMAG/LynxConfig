@@ -3,3 +3,11 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+/.idea/
+/.vs/
+/.vscode/
+*.nupkg
+[Oo]bj/
+[Bb]in/
+[Ll]ib/
+.[Dd]otnet/

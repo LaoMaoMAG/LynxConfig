@@ -14,9 +14,9 @@ public class TestData() : ConfigBase<TestData>("./test.json", EnumConfigFileType
     
     public class Test5Data
     {
-        public string Test { get; set; } = "test";
-        public int Test2 { get; set; } = 123;
-        public bool Test3 { get; set; } = true;
-        public float Test4 { get; set; } = 1.23f;
+        public string Test11 { get; set; } = "test";
+        public int Test22 { get; set; } = 123;
+        public bool Test33 { get; set; } = true;
+        public float Test44 { get; set; } = 1.23f;
     }
 }

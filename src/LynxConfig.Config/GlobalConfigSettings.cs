@@ -16,13 +16,14 @@ public static class GlobalConfigSettings
     /// <summary>
     /// 隐藏成员列表
     /// </summary>
-    public static List<string> HiddenMemberList { get; } = [];
+    public static HashSet<string> HiddenMemberList { get; }
 
     static GlobalConfigSettings()
     {
         // 添加隐藏成员
-        HiddenMemberList.AddRange(Utilities.GetPublicMemberNames<ConfigBase<object>>());
-        HiddenMemberList.AddRange(Utilities.GetPublicMemberNames<ConfigSingleton<object>>());
-        HiddenMemberList = [.. HiddenMemberList.Distinct()];
+        var dataList = new List<string>();
+        dataList.AddRange(Utilities.GetPublicMemberNames<ConfigBase<object>>());
+        dataList.AddRange(Utilities.GetPublicMemberNames<ConfigSingleton<object>>());
+        HiddenMemberList = new HashSet<string>(dataList.Distinct());
     }
 }

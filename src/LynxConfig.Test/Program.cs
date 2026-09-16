@@ -6,10 +6,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("HiddenMemberList:");
-        foreach (var name in GlobalConfigSettings.HiddenMemberList) Console.WriteLine(name);
-        Console.WriteLine("=================");
-        
         // Base 模式
         TestData data = new();
         data.Init();
