@@ -1,5 +1,0 @@
-/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config.Toml/obj/Debug/net8.0/LynxConfig.Config.Toml.csproj.AssemblyReference.cache
-/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config.Toml/obj/Debug/net8.0/LynxConfig.Config.Toml.GeneratedMSBuildEditorConfig.editorconfig
-/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config.Toml/obj/Debug/net8.0/LynxConfig.Config.Toml.AssemblyInfoInputs.cache
-/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config.Toml/obj/Debug/net8.0/LynxConfig.Config.Toml.AssemblyInfo.cs
-/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Config.Toml/obj/Debug/net8.0/LynxConfig.Config.Toml.csproj.CoreCompileInputs.cache
