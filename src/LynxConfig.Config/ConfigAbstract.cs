@@ -30,7 +30,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// <summary>
     /// 配置数据
     /// </summary>
-    protected abstract T ConfigData { get; }
+    public abstract T ConfigData { get; }
 
     private IConfigParser<T>? _parser;
 

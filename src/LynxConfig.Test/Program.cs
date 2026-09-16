@@ -1,4 +1,5 @@
 ﻿using LynxConfig.Config;
+using LynxConfig.Config.Enums;
 
 namespace LynxConfig.Test;
 
@@ -23,5 +24,15 @@ class Program
         TestData1.Instance.Test = "bbbb";
         TestData1.Instance.Test2 = 114514;
         TestData1.Instance.Save();
+        
+        // Binding 模式
+        TestData2 data2 = new();
+        var binding = new ConfigBinding<TestData2>(data2, "./test2.json", EnumConfigFileType.Json);
+        binding.Load();
+        Console.WriteLine(data2.Test);
+        Console.WriteLine(data2.Test2);
+        data2.Test = "bbbb";
+        data2.Test2 = 114514;
+        binding.Save();
     }
 }

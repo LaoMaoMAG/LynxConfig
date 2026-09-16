@@ -5,12 +5,13 @@ namespace LynxConfig.Config;
 
 /// <summary>
 /// 配置单例类
+/// 单例模式
 /// </summary>
 public class ConfigSingleton<T> : ConfigAbstract<T> where T : class, new()
 {
     public sealed override string FilePath { get; init; }
     
-    protected sealed override T ConfigData { get; }
+    public sealed override T ConfigData { get; }
     
     public static T Instance { get; } = new();
     

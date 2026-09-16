@@ -5,13 +5,14 @@ namespace LynxConfig.Config;
 
 /// <summary>
 /// 配置基类
+/// 基础继承模式
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public class ConfigBase<T> : ConfigAbstract<T> where T : class, new()
 {
     public sealed override string FilePath { get; init; } = null!;
 
-    protected sealed override T ConfigData { get; }
+    public sealed override T ConfigData { get; }
     
     protected ConfigBase(string filePath, EnumConfigFileType configFileType = EnumConfigFileType.Default)
     {
