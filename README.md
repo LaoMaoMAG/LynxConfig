@@ -1,4 +1,4 @@
-![LynxConfig](https://socialify.dev/LaoMaoMAG/LynxConfig/image?custom_description=%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F%E3%80%81%E6%98%93%E7%94%A8%E3%80%81%E5%BC%BA%E7%B1%BB%E5%9E%8B%E7%9A%84+.NET+%E9%85%8D%E7%BD%AE%E5%BA%93&description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=1&stargazers=1&theme=Auto)
+![LynxConfig](https://socialify.dev/LaoMaoMAG/LynxConfig/image?description=1&font=KoHo&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FLaoMaoMAG%2FLynxConfig%2Frefs%2Fheads%2Fmaster%2Ficon.png&name=1&pattern=Diagonal+Stripes&pulls=1&stargazers=1&theme=Auto)
 
 ## 用途
 
