@@ -1,5 +1,6 @@
 using LynxConfig.Config.Enums;
 using LynxConfig.Core;
+using LynxConfig.Core.Interfaces;
 
 namespace LynxConfig.Config;
 
@@ -13,13 +14,15 @@ public class ConfigSingleton<T> : ConfigAbstract<T> where T : class, new()
     
     public sealed override T ConfigData { get; }
     
+    public sealed override IConfigParser<T> Parser { get; }
+    
     public static T Instance { get; } = new();
     
-    protected ConfigSingleton(string filePath, EnumConfigFileType configFileType = EnumConfigFileType.Default)
+    protected ConfigSingleton(string filePath, IConfigParser<T> parser)
     {
         ConfigData = (this as T)!;
         FilePath = filePath;
-        ConfigFileType = configFileType;
+        Parser = parser;
         Init();
     }
 }

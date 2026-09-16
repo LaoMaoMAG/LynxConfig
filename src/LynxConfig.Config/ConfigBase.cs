@@ -1,5 +1,6 @@
 using LynxConfig.Config.Enums;
 using LynxConfig.Core;
+using LynxConfig.Core.Interfaces;
 
 namespace LynxConfig.Config;
 
@@ -14,11 +15,14 @@ public class ConfigBase<T> : ConfigAbstract<T> where T : class, new()
 
     public sealed override T ConfigData { get; }
     
-    protected ConfigBase(string filePath, EnumConfigFileType configFileType = EnumConfigFileType.Default)
+    public sealed override IConfigParser<T> Parser { get; }
+    
+    protected ConfigBase(string filePath, IConfigParser<T> parser)
     {
         ConfigData = (this as T)!;
         FilePath = filePath;
-        ConfigFileType = configFileType;
+        // ConfigFileType = configFileType;
+        Parser = parser;
         Init();
     }
     

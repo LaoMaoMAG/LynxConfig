@@ -1,9 +1,10 @@
 using LynxConfig.Config;
 using LynxConfig.Config.Enums;
+using LynxConfig.Parser.Json;
 
 namespace LynxConfig.Test;
 
-public class TestData() : ConfigBase<TestData>("./test.json", EnumConfigFileType.Json)
+public class TestData() : ConfigBase<TestData>("./test.json", new JsonParser<TestData>())
 {
     public string Test { get; set; } = "test";
     public int Test2 { get; set; } = 123;

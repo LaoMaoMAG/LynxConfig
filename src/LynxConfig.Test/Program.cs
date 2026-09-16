@@ -1,5 +1,6 @@
 ﻿using LynxConfig.Config;
 using LynxConfig.Config.Enums;
+using LynxConfig.Parser.Json;
 
 namespace LynxConfig.Test;
 
@@ -27,7 +28,7 @@ class Program
         
         // Binding 模式
         TestData2 data2 = new();
-        var binding = new ConfigBinding<TestData2>(data2, "./test2.json", EnumConfigFileType.Json);
+        var binding = new ConfigBinding<TestData2>(data2, "./test2.json", new JsonParser<TestData2>());
         binding.Load();
         Console.WriteLine(data2.Test);
         Console.WriteLine(data2.Test2);

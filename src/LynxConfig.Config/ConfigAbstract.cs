@@ -32,14 +32,17 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// </summary>
     public abstract T ConfigData { get; }
 
-    private IConfigParser<T>? _parser;
+    /// <summary>
+    /// 配置文件解析器
+    /// </summary>
+    public abstract IConfigParser<T> Parser { get; }
 
     /// <summary>
     /// 初始化
     /// </summary>
     public void Init()
     {
-        IntiParser();
+        // IntiParser();
         InitFile();
     }
     
@@ -49,8 +52,9 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// <exception cref="ArgumentOutOfRangeException"></exception>
     private void IntiParser()
     {
-        if (_parser != null) return;
-        _parser = ConfigFileType switch
+        /*
+        if (Parser != null) return;
+        Parser = ConfigFileType switch
         {
             EnumConfigFileType.Json => new JsonParser<T>(),
             EnumConfigFileType.Toml => new TomlParser<T>(),
@@ -59,6 +63,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
             EnumConfigFileType.Default => throw new ArgumentOutOfRangeException(),
             _ => throw new ArgumentOutOfRangeException()
         };
+        */
     }
     
     /// <summary>
@@ -77,7 +82,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     public void Load()
     {
         var str = File.ReadAllText(FilePath);
-        var loadedData = _parser!.Deserialization(str);
+        var loadedData = Parser!.Deserialization(str);
         Utilities.CopyProperties(loadedData, ConfigData);
     }
 
@@ -86,7 +91,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// </summary>
     public void Save()
     {
-        var str = _parser!.Serialization(ConfigData, GlobalConfigSettings.HiddenMemberList);
+        var str = Parser!.Serialization(ConfigData, GlobalConfigSettings.HiddenMemberList);
         File.WriteAllText(FilePath, str);
     }
 
