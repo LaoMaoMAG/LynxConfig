@@ -13,27 +13,33 @@ public class ConfigBase<T> : ConfigAbstract<T> where T : class, new()
 {
     public sealed override string FilePath { get; init; } = null!;
 
-    public sealed override T ConfigData { get; }
-    
-    public sealed override IConfigParser<T> Parser { get; }
-    
-    protected ConfigBase(string filePath, IConfigParser<T> parser)
+    protected sealed override T ConfigData { get; }
+
+    protected sealed override IConfigParser Parser { get; }
+
+    protected ConfigBase(string filePath, IConfigParser parser)
     {
+        // 验证泛型类型
+        Utilities.GenericsValidation<T>(this);
+        
         ConfigData = (this as T)!;
         FilePath = filePath;
-        // ConfigFileType = configFileType;
         Parser = parser;
         Init();
     }
-    
+
     public ConfigBase(EnumConfigFileType configFileType = EnumConfigFileType.Default)
     {
+        // 验证泛型类型
+        Utilities.GenericsValidation<T>(this);
+        
         ConfigData = (this as T)!;
-        ConfigFileType = configFileType;
     }
-    
+
     public ConfigBase()
     {
+        // 验证泛型类型
+        Utilities.GenericsValidation<T>(this);
         ConfigData = (this as T)!;
     }
 }

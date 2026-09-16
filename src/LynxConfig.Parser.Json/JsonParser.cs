@@ -8,9 +8,11 @@ namespace LynxConfig.Parser.Json;
 /// Json 解析器
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class JsonParser<T> : IConfigParser<T> where T : class, new()
+public class JsonParser : IConfigParser
 {
-    public string Serialization(T obj, HashSet<string> hiddenMemberList)
+    public static IConfigParser Instance { get; } = new JsonParser();
+
+    public string Serialization<T>(T obj, HashSet<string> hiddenMemberList) where T : class, new()
     {
         var typeInfoResolver = new DefaultJsonTypeInfoResolver
         {
@@ -34,7 +36,7 @@ public class JsonParser<T> : IConfigParser<T> where T : class, new()
         return JsonSerializer.Serialize(obj, options);
     }
 
-    public T Deserialization(string str)
+    public T Deserialization<T>(string str) where T : class, new()
     {
         return JsonSerializer.Deserialize<T>(str)!;
     }

@@ -28,7 +28,7 @@ class Program
         
         // Binding 模式
         TestData2 data2 = new();
-        var binding = new ConfigBinding<TestData2>(data2, "./test2.json", new JsonParser<TestData2>());
+        var binding = new ConfigBinding<TestData2>(data2, "./test2.json", JsonParser.Instance);
         binding.Load();
         Console.WriteLine(data2.Test);
         Console.WriteLine(data2.Test2);

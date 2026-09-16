@@ -4,7 +4,7 @@ using LynxConfig.Parser.Json;
 
 namespace LynxConfig.Test;
 
-public class TestData() : ConfigBase<TestData>("./test.json", new JsonParser<TestData>())
+public class TestData() : ConfigBase<TestData>("./test.json", JsonParser.Instance)
 {
     public string Test { get; set; } = "test";
     public int Test2 { get; set; } = 123;

@@ -37,4 +37,20 @@ public static class Utilities
         var fieldNames = type.GetFields(flags).Select(f => f.Name);
         return [.. propertyNames.Concat(fieldNames).Distinct()];
     }
+    
+    /// <summary>
+    /// 泛型验证
+    /// </summary>
+    /// <typeparam name="T">泛型类型</typeparam>
+    /// <param name="obj">对象</param>
+    public static void GenericsValidation<T>(object obj)
+    {
+        if (obj is not T)
+        {
+            throw new InvalidOperationException
+            (
+                $"类型参数 T ({typeof(T)}) 必须与具体配置类型 ({obj.GetType()} 匹配！)."
+            );
+        }
+    }
 }

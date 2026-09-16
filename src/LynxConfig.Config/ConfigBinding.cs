@@ -11,16 +11,15 @@ namespace LynxConfig.Config;
 public class ConfigBinding<T> : ConfigAbstract<T> where T : class, new()
 {
     public sealed override string FilePath { get; init; }
+
+    protected sealed override T ConfigData { get; }
+
+    protected sealed override IConfigParser Parser { get; }
     
-    public sealed override T ConfigData { get; }
-    
-    public sealed override IConfigParser<T> Parser { get; }
-    
-    public ConfigBinding(T data, string file, IConfigParser<T> parser)
+    public ConfigBinding(T data, string file, IConfigParser parser)
     {
         ConfigData = data;
         FilePath = file;
-        // ConfigFileType = configFileType;
         Parser = parser;
         Init();
     }

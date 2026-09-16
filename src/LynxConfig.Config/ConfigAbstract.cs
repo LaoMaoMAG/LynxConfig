@@ -2,8 +2,6 @@ using LynxConfig.Config.Enums;
 using LynxConfig.Core.Interfaces;
 using LynxConfig.Core;
 
-
-
 namespace LynxConfig.Config;
 
 public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new()
@@ -14,54 +12,21 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     public abstract string FilePath { get; init; }
 
     /// <summary>
-    /// 配置文件类型
-    /// </summary>
-    protected EnumConfigFileType ConfigFileType
-    {
-        get => _configFileType == EnumConfigFileType.Default
-            ? GlobalConfigSettings.DefaultConfigFileType
-            : _configFileType;
-        init => _configFileType = value;
-    }
-    private readonly EnumConfigFileType _configFileType = EnumConfigFileType.Default;
-
-    /// <summary>
     /// 配置数据
     /// </summary>
-    public abstract T ConfigData { get; }
+    protected abstract T ConfigData { get; }
 
     /// <summary>
     /// 配置文件解析器
     /// </summary>
-    public abstract IConfigParser<T> Parser { get; }
+    protected abstract IConfigParser Parser { get; }
 
     /// <summary>
     /// 初始化
     /// </summary>
     public void Init()
     {
-        // IntiParser();
         InitFile();
-    }
-    
-    /// <summary>
-    /// 初始化解析器
-    /// </summary>
-    /// <exception cref="ArgumentOutOfRangeException"></exception>
-    private void IntiParser()
-    {
-        /*
-        if (Parser != null) return;
-        Parser = ConfigFileType switch
-        {
-            EnumConfigFileType.Json => new JsonParser<T>(),
-            EnumConfigFileType.Toml => new TomlParser<T>(),
-            EnumConfigFileType.Yaml => throw new ArgumentOutOfRangeException(),
-            EnumConfigFileType.Xml => throw new ArgumentOutOfRangeException(),
-            EnumConfigFileType.Default => throw new ArgumentOutOfRangeException(),
-            _ => throw new ArgumentOutOfRangeException()
-        };
-        */
     }
     
     /// <summary>
@@ -69,6 +34,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// </summary>
     private void InitFile()
     {
+        if (string.IsNullOrWhiteSpace(FilePath)) throw new InvalidOperationException("FilePath 未设置");
         if (File.Exists(FilePath)) return;
         File.Create(FilePath).Dispose();
         Save();
@@ -80,7 +46,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     public void Load()
     {
         var str = File.ReadAllText(FilePath);
-        var loadedData = Parser!.Deserialization(str);
+        var loadedData = Parser!.Deserialization<T>(str);
         Utilities.CopyProperties(loadedData, ConfigData);
     }
 

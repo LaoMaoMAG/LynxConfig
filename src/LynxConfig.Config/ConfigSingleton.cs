@@ -11,15 +11,18 @@ namespace LynxConfig.Config;
 public class ConfigSingleton<T> : ConfigAbstract<T> where T : class, new()
 {
     public sealed override string FilePath { get; init; }
+
+    protected sealed override T ConfigData { get; }
     
-    public sealed override T ConfigData { get; }
-    
-    public sealed override IConfigParser<T> Parser { get; }
+    protected sealed override IConfigParser Parser { get; }
     
     public static T Instance { get; } = new();
     
-    protected ConfigSingleton(string filePath, IConfigParser<T> parser)
+    protected ConfigSingleton(string filePath, IConfigParser parser)
     {
+        // 验证泛型类型
+        Utilities.GenericsValidation<T>(this);
+        
         ConfigData = (this as T)!;
         FilePath = filePath;
         Parser = parser;
