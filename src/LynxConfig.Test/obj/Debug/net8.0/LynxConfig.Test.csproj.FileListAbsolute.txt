@@ -1,0 +1,15 @@
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/bin/Debug/net8.0/LynxConfig.Test
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/bin/Debug/net8.0/LynxConfig.Test.deps.json
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/bin/Debug/net8.0/LynxConfig.Test.runtimeconfig.json
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/bin/Debug/net8.0/LynxConfig.Test.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/bin/Debug/net8.0/LynxConfig.Test.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.GeneratedMSBuildEditorConfig.editorconfig
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.AssemblyInfoInputs.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.AssemblyInfo.cs
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.csproj.CoreCompileInputs.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.sourcelink.json
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/refint/LynxConfig.Test.dll
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.pdb
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/LynxConfig.Test.genruntimeconfig.cache
+/home/laomaomag/Studio/DotNET/LynxConfig/src/LynxConfig.Test/obj/Debug/net8.0/ref/LynxConfig.Test.dll

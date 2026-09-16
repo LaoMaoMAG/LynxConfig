@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\LynxConfig.Config\LynxConfig.Config.csproj" />
+      <ProjectReference Include="..\LynxConfig.Core\LynxConfig.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Tomlyn" Version="2.10.1" />
+    </ItemGroup>
+
+</Project>
