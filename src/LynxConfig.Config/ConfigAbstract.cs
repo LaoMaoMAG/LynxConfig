@@ -1,18 +1,51 @@
+using LynxConfig.Config.Enums;
 using LynxConfig.Core.Interfaces;
+using LynxConfig.Parser.Toml;
+
 
 namespace LynxConfig.Config;
 
 public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new()
 {
+    /// <summary>
+    /// 配置文件路径
+    /// </summary>
     public abstract string FilePath { get; set; }
 
+    /// <summary>
+    /// 配置文件类型
+    /// </summary>
+    public EnumConfigFileType ConfigFileType
+    {
+        get => _configFileType == EnumConfigFileType.Default
+            ? GlobalConfigSettings.DefaultConfigFileType
+            : _configFileType;
+        set => _configFileType = value;
+    }
+    private EnumConfigFileType _configFileType = EnumConfigFileType.Default;
+
+    /// <summary>
+    /// 配置数据
+    /// </summary>
     protected abstract T ConfigData { get; set; }
+    
+    protected IConfigParser<T> Parser;
 
     /// <summary>
     /// 初始化
     /// </summary>
     public void Init()
     {
+        Parser = ConfigFileType switch
+        {
+            EnumConfigFileType.Json => throw new ArgumentOutOfRangeException(),
+            EnumConfigFileType.Toml => new TomlParser<T>(),
+            EnumConfigFileType.Yaml => throw new ArgumentOutOfRangeException(),
+            EnumConfigFileType.Xml => throw new ArgumentOutOfRangeException(),
+            EnumConfigFileType.Default => throw new ArgumentOutOfRangeException(),
+            _ => throw new ArgumentOutOfRangeException()
+        };
+        
         if (File.Exists(FilePath)) return;
         File.Create(FilePath).Dispose();
         Save();
@@ -24,7 +57,8 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     public void Load()
     {
         var str = File.ReadAllText(FilePath);
-        ConfigData = Deserialization(str);
+        Deserialization(str, out var tempData);
+        ConfigData = tempData;
     }
 
     /// <summary>
@@ -72,10 +106,16 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// <summary>
     /// 序列化
     /// </summary>
-    protected abstract string Serialization(T obj);
+    protected string Serialization(T obj)
+    {
+        return Parser.Serialization(obj);
+    }
 
     /// <summary>
     /// 反序列化
     /// </summary>
-    protected abstract T Deserialization(string str);
+    protected void Deserialization(string str, out T obj)
+    {
+        Parser.Deserialization(str, out obj);
+    }
 }

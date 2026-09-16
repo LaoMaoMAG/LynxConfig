@@ -8,18 +8,13 @@ namespace LynxConfig.Parser.Toml;
 /// </summary>
 public class TomlParser<T> : IConfigParser<T> where T : class, new()
 {
-    public TomlParser()
-    {
-        
-    }
-    
     public string Serialization(T obj)
     {
         return TomlSerializer.Serialize(obj);
     }
     
-    public T Deserialization(string str)
+    public void Deserialization(string str, out T obj)
     {
-        return TomlSerializer.Deserialize<T>(str) ?? throw new TomlException("TOML 反序列化结果为空！");
+        obj = TomlSerializer.Deserialize<T>(str) ?? throw new TomlException("TOML 反序列化结果为空！");
     }
 }

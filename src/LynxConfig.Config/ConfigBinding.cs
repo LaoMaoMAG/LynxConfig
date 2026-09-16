@@ -1,6 +1,6 @@
 namespace LynxConfig.Config;
 
-public class FileConfigSingleton
+public class ConfigBinding
 {
     
 }

@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\LynxConfig.Config\LynxConfig.Config.csproj" />
       <ProjectReference Include="..\LynxConfig.Core\LynxConfig.Core.csproj" />
     </ItemGroup>
 
