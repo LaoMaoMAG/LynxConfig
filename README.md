@@ -398,17 +398,17 @@ LynxConfig 希望解决的是：
           ▼
       普通 C# 对象
           │
-      ┌─┴───┐
-      │          │
-    Load         Save
-      │          │
-      └──┬──┘
-            ▼
-          Parser
-           │
-   ┌───┼─────┐
-   ▼      ▼    ▼    ▼
- JSON   TOML    YAML  XML
+      ┌───┴───┐
+      │       │
+    Load     Save
+      │       │
+      └───┬───┘
+          ▼
+       Parser
+          │
+   ┌──────┼──────┐
+   ▼      ▼      ▼
+ JSON   TOML    YAML ...
 ```
 
 而 Base、Singleton 和 Binding 则解决的是：
