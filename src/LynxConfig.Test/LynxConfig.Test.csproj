@@ -9,7 +9,11 @@
 
     <ItemGroup>
       <ProjectReference Include="..\LynxConfig.Config\LynxConfig.Config.csproj" />
+      <ProjectReference Include="..\LynxConfig.Database\LynxConfig.Database.csproj" />
+      <ProjectReference Include="..\LynxConfig.Parser.Json\LynxConfig.Parser.Json.csproj" />
       <ProjectReference Include="..\LynxConfig.Parser.Toml\LynxConfig.Parser.Toml.csproj" />
+      <ProjectReference Include="..\LynxConfig.Parser.Xml\LynxConfig.Parser.Xml.csproj" />
+      <ProjectReference Include="..\LynxConfig.Parser.Yaml\LynxConfig.Parser.Yaml.csproj" />
     </ItemGroup>
 
 </Project>
