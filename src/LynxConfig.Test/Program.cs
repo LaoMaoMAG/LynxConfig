@@ -9,7 +9,7 @@ class Program
     static void Main(string[] args)
     {
         // Base 模式
-        TestData data = new();
+        TestData data = new("./test.json");
         data.Init();
         data.Load();
         Console.WriteLine(data.Test);

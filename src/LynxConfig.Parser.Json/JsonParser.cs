@@ -38,6 +38,6 @@ public class JsonParser : IConfigParser
 
     public T Deserialization<T>(string str) where T : class, new()
     {
-        return JsonSerializer.Deserialize<T>(str)!;
+        return JsonSerializer.Deserialize<T>(str) ?? throw new JsonException();
     }
 }

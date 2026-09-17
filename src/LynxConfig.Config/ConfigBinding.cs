@@ -10,7 +10,7 @@ namespace LynxConfig.Config;
 /// <typeparam name="T"></typeparam>
 public class ConfigBinding<T> : ConfigAbstract<T> where T : class, new()
 {
-    public sealed override string FilePath { get; init; }
+    public sealed override string ConfigFilePath { get; init; }
 
     protected sealed override T ConfigData { get; }
 
@@ -19,7 +19,7 @@ public class ConfigBinding<T> : ConfigAbstract<T> where T : class, new()
     public ConfigBinding(T data, string file, IConfigParser parser)
     {
         ConfigData = data;
-        FilePath = file;
+        ConfigFilePath = file;
         Parser = parser;
         Init();
     }

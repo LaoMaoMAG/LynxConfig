@@ -11,7 +11,7 @@ namespace LynxConfig.Config;
 /// <typeparam name="T"></typeparam>
 public class ConfigBase<T> : ConfigAbstract<T> where T : class, new()
 {
-    public sealed override string FilePath { get; init; } = null!;
+    public sealed override string ConfigFilePath { get; init; } = null!;
 
     protected sealed override T ConfigData { get; }
 
@@ -23,7 +23,7 @@ public class ConfigBase<T> : ConfigAbstract<T> where T : class, new()
         Utilities.GenericsValidation<T>(this);
         
         ConfigData = (this as T)!;
-        FilePath = filePath;
+        ConfigFilePath = filePath;
         Parser = parser;
         Init();
     }

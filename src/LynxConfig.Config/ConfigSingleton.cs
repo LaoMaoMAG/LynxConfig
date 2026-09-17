@@ -10,7 +10,7 @@ namespace LynxConfig.Config;
 /// </summary>
 public class ConfigSingleton<T> : ConfigAbstract<T> where T : class, new()
 {
-    public sealed override string FilePath { get; init; }
+    public sealed override string ConfigFilePath { get; init; }
 
     protected sealed override T ConfigData { get; }
     
@@ -24,7 +24,7 @@ public class ConfigSingleton<T> : ConfigAbstract<T> where T : class, new()
         Utilities.GenericsValidation<T>(this);
         
         ConfigData = (this as T)!;
-        FilePath = filePath;
+        ConfigFilePath = filePath;
         Parser = parser;
         Init();
     }

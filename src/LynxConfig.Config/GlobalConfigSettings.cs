@@ -24,6 +24,7 @@ public static class GlobalConfigSettings
         var dataList = new List<string>();
         dataList.AddRange(Utilities.GetPublicMemberNames<ConfigBase<object>>());
         dataList.AddRange(Utilities.GetPublicMemberNames<ConfigSingleton<object>>());
-        HiddenMemberList = new HashSet<string>(dataList.Distinct());
+        dataList.AddRange(Utilities.GetPublicMemberNames<ConfigBinding<object>>());
+        HiddenMemberList = [.. dataList.Distinct()];
     }
 }

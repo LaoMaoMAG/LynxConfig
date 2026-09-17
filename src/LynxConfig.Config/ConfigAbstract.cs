@@ -4,12 +4,15 @@ using LynxConfig.Core;
 
 namespace LynxConfig.Config;
 
+/// <summary>
+/// 配置抽象类
+/// </summary>
 public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new()
 {
     /// <summary>
     /// 配置文件路径
     /// </summary>
-    public abstract string FilePath { get; init; }
+    public abstract string ConfigFilePath { get; init; }
 
     /// <summary>
     /// 配置数据
@@ -34,9 +37,9 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// </summary>
     private void InitFile()
     {
-        if (string.IsNullOrWhiteSpace(FilePath)) throw new InvalidOperationException("FilePath 未设置");
-        if (File.Exists(FilePath)) return;
-        File.Create(FilePath).Dispose();
+        if (string.IsNullOrWhiteSpace(ConfigFilePath)) throw new InvalidOperationException("ConfigFilePath 未设置");
+        if (File.Exists(ConfigFilePath)) return;
+        File.Create(ConfigFilePath).Dispose();
         Save();
     }
     
@@ -45,9 +48,9 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     /// </summary>
     public void Load()
     {
-        var str = File.ReadAllText(FilePath);
+        var str = File.ReadAllText(ConfigFilePath);
         var loadedData = Parser!.Deserialization<T>(str);
-        Utilities.CopyProperties(loadedData, ConfigData);
+        Utilities.CopyProperties(loadedData, ConfigData, GlobalConfigSettings.HiddenMemberList);
     }
 
     /// <summary>
@@ -56,7 +59,7 @@ public abstract class ConfigAbstract<T> : IConfigLifecycle where T : class, new(
     public void Save()
     {
         var str = Parser!.Serialization(ConfigData, GlobalConfigSettings.HiddenMemberList);
-        File.WriteAllText(FilePath, str);
+        File.WriteAllText(ConfigFilePath, str);
     }
 
     public bool TryLoad() => TryLoad(out _);
