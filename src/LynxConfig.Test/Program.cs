@@ -1,5 +1,4 @@
 ﻿using LynxConfig.Config;
-using LynxConfig.Config.Enums;
 using LynxConfig.Parser.Json;
 
 namespace LynxConfig.Test;
