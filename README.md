@@ -429,4 +429,6 @@ Parser 解决的是：
 
 ## License
 
+Copyright © 2026 laomaomag
+
 本项目使用的许可证请参阅仓库中的 [`LICENSE`](./LICENSE) 文件。
