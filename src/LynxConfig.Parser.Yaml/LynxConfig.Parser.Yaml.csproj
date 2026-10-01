@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\LynxConfig.Core\LynxConfig.Core.csproj" />
+    </ItemGroup>
+
 </Project>

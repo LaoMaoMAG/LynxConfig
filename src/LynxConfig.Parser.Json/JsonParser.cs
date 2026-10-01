@@ -7,7 +7,6 @@ namespace LynxConfig.Parser.Json;
 /// <summary>
 /// Json 解析器
 /// </summary>
-/// <typeparam name="T"></typeparam>
 public class JsonParser : IConfigParser
 {
     public static IConfigParser Instance { get; } = new JsonParser();
