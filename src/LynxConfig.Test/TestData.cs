@@ -1,13 +1,15 @@
 using LynxConfig.Config;
 using LynxConfig.Config.Enums;
 using LynxConfig.Parser.Json;
+using LynxConfig.Parser.Xml;
+
 
 namespace LynxConfig.Test;
 
 public class TestData : ConfigBase<TestData>
 {
     public TestData() { }
-    public TestData(string filePath) : base(filePath, JsonParser.Instance)
+    public TestData(string filePath) : base(filePath, XmlParser.Instance)
     {
         
     }
